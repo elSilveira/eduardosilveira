@@ -3,3 +3,28 @@
   height: 100vh;
   overflow: hidden;
 }
+
+.bottom-navigation {
+  .dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: rgb(230, 230, 230);
+    cursor: pointer;
+  }
+  .selected {
+    background-color: #535353;
+  }
+  .center {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  position: absolute;
+  width: 100%;
+  height: 50px;
+  z-index: 9;
+  bottom: 0;
+}

@@ -1,3 +1,23 @@
 <div class="main--container">
   <app-main-tabs></app-main-tabs>
 </div>
+<div class="bottom-navigation">
+  <div class="center">
+    <div class="dot"
+         [routerLink]="'/home'"
+         routerLinkActive="selected"
+         ariaCurrentWhenActive="page"></div>
+    <div class="dot"
+         [routerLink]="'/about'"
+         routerLinkActive="selected"
+         ariaCurrentWhenActive="page"></div>
+    <div class="dot"
+         [routerLink]="'/experience'"
+         routerLinkActive="selected"
+         ariaCurrentWhenActive="page"></div>
+    <div class="dot"
+         [routerLink]="'/contact'"
+         routerLinkActive="selected"
+         ariaCurrentWhenActive="page"></div>
+  </div>
+</div>
