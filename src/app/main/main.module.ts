@@ -2,19 +2,25 @@ import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
 import { RouterModule } from "@angular/router";
 import { TabComponentComponent } from "../components/tab-component/tab-component.component";
-import { MainTabsComponent } from "./main-tabs/main-tabs.component";
+import { AboutComponent } from "./main-tabs/about/about.component";
+import { ContactComponent } from "./main-tabs/contact/contact.component";
+import { ExperienceComponent } from "./main-tabs/experience/experience.component";
+import { HomeComponent } from "./main-tabs/home/home.component";
 import { MainComponent } from "./main.component";
 
 
 @NgModule({
   declarations: [
     MainComponent,
-    MainTabsComponent
+    AboutComponent,
+    ExperienceComponent,
+    ContactComponent,
+    HomeComponent
   ],
   exports: [
     MainComponent
   ],
-  imports:[
+  imports: [
     TabComponentComponent,
     CommonModule,
     RouterModule

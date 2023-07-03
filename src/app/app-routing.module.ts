@@ -1,24 +1,28 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MainComponent } from './main/main.component';
+import { AboutComponent } from './main/main-tabs/about/about.component';
+import { ContactComponent } from './main/main-tabs/contact/contact.component';
+import { ExperienceComponent } from './main/main-tabs/experience/experience.component';
+import { HomeComponent } from './main/main-tabs/home/home.component';
 
-const routes: Routes = [
+export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home', 
-    pathMatch: 'full'
-  }, {
+    pathMatch: 'full',
+    redirectTo: 'home',
+  },
+  {
     path: 'home',
-    component: MainComponent, pathMatch: 'full'
+    component: HomeComponent, pathMatch: 'full'
   }, {
     path: 'about',
-    component: MainComponent, pathMatch: 'full'
+    component: AboutComponent, pathMatch: 'full'
   }, {
     path: 'experience',
-    component: MainComponent, pathMatch: 'full'
+    component: ExperienceComponent, pathMatch: 'full'
   }, {
     path: 'contact',
-    component: MainComponent, pathMatch: 'full'
+    component: ContactComponent, pathMatch: 'full'
   }
 ];
 

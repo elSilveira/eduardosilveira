@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MainModule } from './main/main.module';
+import { RouteService } from './services/route.service';
 
 @NgModule({
   declarations: [
@@ -14,9 +15,9 @@ import { MainModule } from './main/main.module';
     BrowserModule,
     AppRoutingModule,
     MainModule,
-    CommonModule    
+    CommonModule
   ],
-  providers: [],
+  providers: [RouteService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
