@@ -5,7 +5,7 @@ import { routes } from "../app-routing.module";
 
 @Injectable()
 export class RouteService {
-  private actual$ = new BehaviorSubject('home');
+  private actual$ = new BehaviorSubject('');
   get actual() { return this.actual$.value; }
 
   constructor(private router: Router) {
@@ -23,10 +23,10 @@ export class RouteService {
   navigateTo(next = true) {
     if (this.navigating) { return; }
     this.navigating = true;
-    let pos = routes.filter(val => val.path != '').map(val => val.path).indexOf(this.actual);
+    let pos = routes.map(val => val.path).indexOf(this.actual);
     pos = pos < 0 ? 0 : pos;
-    let nextPath = routes.filter(val => val.path != '')[pos + (next ? 1 : -1)] ?? routes[(next ? 1 : routes.length - 1)];
-    this.router.navigate([nextPath.path]);
+    let nextPath = routes[pos + (next ? 1 : -1)] ?? routes[(next ? 0 : routes.length - 1)];
+    this.router.navigate([nextPath.path], {skipLocationChange: true});
     setTimeout(
       () => {
         this.navigating = false;

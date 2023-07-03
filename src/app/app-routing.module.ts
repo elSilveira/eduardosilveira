@@ -8,11 +8,6 @@ import { HomeComponent } from './main/main-tabs/home/home.component';
 export const routes: Routes = [
   {
     path: '',
-    pathMatch: 'full',
-    redirectTo: 'home',
-  },
-  {
-    path: 'home',
     component: HomeComponent, pathMatch: 'full'
   }, {
     path: 'about',
