@@ -5,6 +5,9 @@
 /tmp
 /out-tsc
 /bazel-out
+docs/CNAME
+docs/CNAME
+
 
 # Node
 /node_modules
@@ -40,9 +43,3 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
-*CNAME
-.CNAME
-CNAME
-/CNAME
-*\docs\CNAME
-docs/CNAME
