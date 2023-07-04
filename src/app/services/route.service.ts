@@ -6,7 +6,7 @@ import { routes } from "../app-routing.module";
 @Injectable()
 export class RouteService {
   private actual$ = new BehaviorSubject('');
-  get actual() { return this.actual$.value; }
+  public get actual() { return this.actual$.value; }
 
   constructor(private router: Router) {
     router.events.subscribe(
