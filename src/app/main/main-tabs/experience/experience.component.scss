@@ -21,10 +21,18 @@
       background-position: center;
       background-image: url("../../../../assets/background.png");
     }
+    a {
+      font-weight: 800;
+      color: #f5f5f5;
+      &:hover {
+        color: #c2c1c1;
+      }
+    }
     h1 {
       border-bottom: 1px solid #c2c1c1;
       margin-bottom: 5px;
       padding-bottom: 1px;
+      display: initial;
     }
     .overlay {
       position: absolute;
@@ -37,18 +45,45 @@
       text-align: center;
       color: #d5d5d5;
       background: #0d0d0dd9;
+      flex-direction: column;
+      .bottom {
+        margin-bottom: -200px;
+        margin-top: 65px;
+      }
+      .companies {
+        overflow: auto;
+        overflow-y: hidden;
+        img {
+          max-height: 75px;
+        }
+        padding: 15px 25px;
+        display: flex;
+        width: 100vw;
+        max-width: calc(100vw - 50px);
+        background-color: white;
+        gap: 50px;
+        align-items: center;
+      }
     }
   }
-  &--biography {
-    background-color: rgb(111, 255, 0);
-  }
-  &--photos {
-    background-color: rgb(0, 204, 255);
-  }
-  &--cases {
-    background-color: rgb(191, 0, 255);
-  }
-  &--contact {
-    background-color: rgb(49, 3, 3);
-  }
+}
+/* width */
+::-webkit-scrollbar {
+  height: 5px;
+  border-radius: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #d7d7d7e6;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #4a5257ee;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #4a5257ee;
 }
