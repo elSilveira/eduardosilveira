@@ -28,8 +28,8 @@ export class ExperienceComponent {
     {
       name: "easycomtec.com", image: "assets/easy.jpg", link: "https://www.easycomtec.com/"
     },
-    {
-      name: "vengreso.com", image: "assets/vengresso.png", link: "https://vengreso.com/"
-    }
+    // {
+    //   name: "vengreso.com", image: "assets/vengresso.png", link: "https://vengreso.com/"
+    // }
   ]
 }
