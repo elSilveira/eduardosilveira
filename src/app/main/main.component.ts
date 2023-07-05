@@ -21,24 +21,13 @@ export class MainComponent {
     });
   }
   downOn = 0;
-  mousedown(event: any) {
-    if (event.target && (event.target instanceof HTMLImageElement || event.target.id === 'eds')) return;
-    this.downOn = event.clientX;
-  }
-  mouseup(event: any) {
-    if (event.target && (event.target instanceof HTMLImageElement || event.target.id === 'eds')) return;
-    if (this.downOn > event.clientX) {
-      this.navigateTo(false);
-    } else if (this.downOn < event.clientX) {
-      this.navigateTo(true);
-    }
-  }
+  
   touchstart(event: any) {
-    if (event.target && (event.target instanceof HTMLImageElement || event.target.id === 'eds')) return;
+    if (event.target instanceof HTMLImageElement || event.target.id === 'eds') return;
     this.downOn = event.changedTouches[0].clientX;
   }
   touchend(event: any) {
-    if (event.target && (event.target instanceof HTMLImageElement || event.target.id === 'eds')) return;
+    if (event.target instanceof HTMLImageElement || event.target.id === 'eds') return;
     if (this.downOn > event.changedTouches[0].clientX) {
       this.navigateTo(true);
     } else if (this.downOn < event.changedTouches[0].clientX) {
