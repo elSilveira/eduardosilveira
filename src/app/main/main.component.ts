@@ -40,9 +40,9 @@ export class MainComponent {
   touchend(event: any) {
     if (event.target && (event.target instanceof HTMLImageElement || event.target.id === 'eds')) return;
     if (this.downOn > event.changedTouches[0].clientX) {
-      this.navigateTo(false);
-    } else if (this.downOn < event.changedTouches[0].clientX) {
       this.navigateTo(true);
+    } else if (this.downOn < event.changedTouches[0].clientX) {
+      this.navigateTo(false);
     }
   }
 
