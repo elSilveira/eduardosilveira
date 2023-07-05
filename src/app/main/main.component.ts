@@ -9,10 +9,6 @@ import { RouteService } from '../services/route.service';
 })
 export class MainComponent {
 
-  private currentX:any;
-  private lastX = 0;
-  private lastT:any;
-
   constructor(private route: ActivatedRoute, public routeService: RouteService) {
     addEventListener("wheel", (event) => {
       //To Bottom
@@ -23,21 +19,32 @@ export class MainComponent {
       }
       event.stopPropagation();
     });
-
-    addEventListener("touchmove", (e) => {
-      this.currentX = e.touches[0].clientX;      
-      if (this.currentX < this.lastX) {
-        this.navigateTo(false);
-      } else if (this.currentX > this.lastX) {
-        this.navigateTo(true);
-      }
-
-      // Save last position
-      this.lastX = this.currentX;
-
-    }, false);
   }
-
+  downOn = 0;
+  mousedown(event: any) {
+    if(event.target && (event.target instanceof HTMLImageElement)) return;
+    this.downOn = event.clientX;
+  }
+  mouseup(event: any) {
+    if(event.target && (event.target instanceof HTMLImageElement)) return;
+    if (this.downOn > event.clientX) {
+      this.navigateTo(false);
+    } else if (this.downOn < event.clientX) {
+      this.navigateTo(true);
+    }
+  }
+  touchstart(event: any) {
+    if(event.target && (event.target instanceof HTMLImageElement)) return;
+    this.downOn = event.changedTouches[0].clientX;
+  }
+  touchend(event: any) {
+    if(event.target && (event.target instanceof HTMLImageElement)) return;
+    if (this.downOn > event.changedTouches[0].clientX) {
+      this.navigateTo(true);
+    } else if (this.downOn < event.changedTouches[0].clientX) {
+      this.navigateTo(false);
+    }
+  }
 
   navigateTo(next = true) {
     this.routeService.navigateTo(next)

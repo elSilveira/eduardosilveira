@@ -24,6 +24,12 @@ export class ExperienceComponent {
     },
     {
       name: "clovercrm.com.br", image: "assets/datacoper.png", link: "https://clovercrm.com.br/a-solucao/"
+    },
+    {
+      name: "easycomtec.com", image: "assets/easy.jpg", link: "https://www.easycomtec.com/"
+    },
+    {
+      name: "vengreso.com", image: "assets/vengresso.png", link: "https://vengreso.com/"
     }
   ]
 }
