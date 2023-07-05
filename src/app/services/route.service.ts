@@ -13,8 +13,9 @@ export class RouteService {
       ev => {
         if (ev instanceof NavigationEnd) {
           let path = ev.url.split('/');
-          this.actual$.next(path[path.length - 1])
-
+          let next = routes.map(r => r.path).filter(rpath => rpath === path[path.length - 1])[0];
+          if (next != null)
+            this.actual$.next(next)
         }
       }
     )
@@ -26,7 +27,7 @@ export class RouteService {
     let pos = routes.map(val => val.path).indexOf(this.actual);
     pos = pos < 0 ? 0 : pos;
     let nextPath = routes[pos + (next ? 1 : -1)] ?? routes[(next ? 0 : routes.length - 1)];
-    this.router.navigate([nextPath.path], {skipLocationChange: true});
+    this.router.navigate([nextPath.path], { skipLocationChange: true });
     setTimeout(
       () => {
         this.navigating = false;
