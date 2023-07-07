@@ -14,6 +14,9 @@ export class ExperienceComponent {
       name: "wearelayer.com", image: "assets/layer.png", link: "https://wearelayer.com/"
     },
     {
+      name: "bmwgroup.com", image: "assets/bmw.png", link: "https://www.bmwgroup.com/"
+    },
+    {
       name: "albaraka.com", image: "assets/albaraka.png", link: "https://albaraka.com/"
     },
     {
@@ -28,8 +31,11 @@ export class ExperienceComponent {
     {
       name: "easycomtec.com", image: "assets/easy.jpg", link: "https://www.easycomtec.com/"
     },
-    // {
-    //   name: "vengreso.com", image: "assets/vengresso.png", link: "https://vengreso.com/"
-    // }
+    {
+      name: "vengreso.com", image: "assets/vengresso.png", link: "https://vengreso.com/"
+    },
+    {
+      name: "zallpy.com", image: "assets/zallpy.png", link: "https://zallpy.com/"
+    }
   ]
 }
