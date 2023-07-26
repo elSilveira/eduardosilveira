@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'curr';
+
+  constructor(){
+    gtag('config', 'G-BN2ZRSGRV4');
+  }
+
 }
+declare var gtag: any;
