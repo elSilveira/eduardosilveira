@@ -54,10 +54,11 @@ a {
   display: flex;
   gap: 40px;
   align-items: self-end;
-  max-width: 80vw;
-  padding: 16px;
+  max-width: 90vw;
+  width: fit-content;
+  margin: 15px auto;
+  padding: 15px;
   overflow: auto;
-  margin-top: 20px;
   .frame {
     width: 500px;
     iframe {
@@ -76,8 +77,12 @@ a {
   display: flex;
   margin: 25px 80px;
   gap: 40px;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-end;
+  max-width: 90vw;
+  width: fit-content;
+  overflow: auto;
+  margin: 15px auto;
+  padding: 15px;
   img {
     width: 200px;
   }
