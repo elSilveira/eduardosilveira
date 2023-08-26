@@ -8,26 +8,11 @@
 <div class="bottom-navigation">
   <h5>{{routeService.actual}}</h5>
   <div class="center">
-    <div class="dot"
-         [routerLink]="'/'"
+    <div class="dot" *ngFor="let dot of dots"
+         [routerLink]="dot"
          routerLinkActive="selected"
          [skipLocationChange]="true"
          [routerLinkActiveOptions]="{exact: true}"
-         ariaCurrentWhenActive="page"></div>
-    <div class="dot"
-         [routerLink]="'/about'"
-         [skipLocationChange]="true"
-         routerLinkActive="selected"
-         ariaCurrentWhenActive="page"></div>
-    <div class="dot"
-         [routerLink]="'/experience'"
-         routerLinkActive="selected"
-         [skipLocationChange]="true"
-         ariaCurrentWhenActive="page"></div>
-    <div class="dot"
-         [routerLink]="'/contact'"
-         [skipLocationChange]="true"
-         routerLinkActive="selected"
          ariaCurrentWhenActive="page"></div>
   </div>
 </div>

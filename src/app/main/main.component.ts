@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { routes } from '../app-routing.module';
 import { RouteService } from '../services/route.service';
 
 @Component({
@@ -21,7 +22,7 @@ export class MainComponent {
     });
   }
   downOn = 0;
-  
+
   touchstart(event: any) {
     if (event.target instanceof HTMLImageElement || event.target.id === 'eds') return;
     this.downOn = event.changedTouches[0].clientX;
@@ -38,5 +39,7 @@ export class MainComponent {
   navigateTo(next = true) {
     this.routeService.navigateTo(next)
   }
+
+  dots = routes.map(r => { return r.path });
 
 }

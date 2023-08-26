@@ -13,9 +13,6 @@ a:active {
 a {
   color: #c2c1c1;
 }
-.top {
-  max-width: 445px;
-}
 .tab {
   min-width: 880px;
   width: 100%;
@@ -34,6 +31,7 @@ a {
       border-bottom: 1px solid #c2c1c1;
       margin-bottom: 5px;
       padding-bottom: 1px;
+      width: fit-content;
     }
     .overlay {
       position: absolute;
@@ -51,4 +49,56 @@ a {
 }
 a {
   color: #d5d5d5;
+}
+.playlist {
+  display: flex;
+  gap: 40px;
+  align-items: self-end;
+  max-width: 80vw;
+  padding: 16px;
+  overflow: auto;
+  margin-top: 20px;
+  .frame {
+    width: 500px;
+    iframe {
+      margin-top: 5px;
+      width: 400px;
+      height: 250px;
+    }
+  }
+}
+.top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ebooks {
+  display: flex;
+  margin: 25px 80px;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 200px;
+  }
+}
+/* width */
+::-webkit-scrollbar {
+  height: 5px;
+  border-radius: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #4a5257ee;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #d7d7d7e6;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b3b2b2e6;
 }

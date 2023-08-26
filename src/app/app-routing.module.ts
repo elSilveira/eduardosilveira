@@ -4,6 +4,7 @@ import { AboutComponent } from './main/main-tabs/about/about.component';
 import { ContactComponent } from './main/main-tabs/contact/contact.component';
 import { ExperienceComponent } from './main/main-tabs/experience/experience.component';
 import { HomeComponent } from './main/main-tabs/home/home.component';
+import { ProjectsComponent } from './main/main-tabs/projects/projects.component';
 
 export const routes: Routes = [
   {
@@ -15,6 +16,9 @@ export const routes: Routes = [
   }, {
     path: 'experience',
     component: ExperienceComponent, pathMatch: 'full'
+  }, {
+    path: 'projects',
+    component: ProjectsComponent, pathMatch: 'full'
   }, {
     path: 'contact',
     component: ContactComponent, pathMatch: 'full'

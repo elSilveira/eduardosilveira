@@ -1,0 +1,37 @@
+<app-tab-component class="about">
+  <div class="tab tab--about">
+    <div class="overlay">
+      <div class="central">
+        <div class="top">
+          <h1>EDUARDO LUIZ DA SILVEIRA</h1>
+          <h3>Projects and Contents</h3>
+        </div>
+        <div class="content">
+          <div class="ebooks">
+            <div class="ebook"
+                 *ngFor="let ebook of ebooks">
+              <a [href]="ebook.url" target="_blank">
+                <h5>{{ebook.title}}</h5>
+                <div class="img">
+                  <img [src]="ebook.img">
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="youtube">
+            <div class="playlist">
+              <div class="frame"
+                   *ngFor="let list of youtubeUrls">
+                <div class="Title">
+                  <h4>{{list.type}}</h4>
+                </div>
+                <iframe [src]="list.value | safeurl"></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="background-image"></div>
+  </div>
+</app-tab-component>
