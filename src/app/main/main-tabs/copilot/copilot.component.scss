@@ -5,16 +5,6 @@
   overflow: auto;
 }
 
-header {
-  background-color: #2a2a72;
-  color: #efefef;
-  padding: 10px 30px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: calc(100% - 60px);
-}
-
 nav a {
   color: #fefefe;
   white-space: nowrap;
@@ -43,7 +33,6 @@ ul li {
 }
 
 #hero {
-  margin-top: 74px;
   background-color: #f2f2f2;
   text-align: center;
   padding: 50px 0;
@@ -104,8 +93,9 @@ ul li {
 #download {
   background-color: #2a2a72;
   color: #fefefe;
-  padding: 50px 0;
+  padding: 50px 0 75px;
   text-align: center;
+  margin-bottom: 198px;
 }
 
 footer {
@@ -117,7 +107,7 @@ footer {
   bottom: 0;
   left: 0;
   width: 100%;
-  padding-bottom: 110px!important;
+  padding-bottom: 110px !important;
   display: flex;
   flex-direction: column;
 }
