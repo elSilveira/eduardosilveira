@@ -19,15 +19,16 @@
   }
 }
 .bottom-navigation {
-  height: 98px;
+  height: 58px;
+  padding-bottom: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   background: rgba(13, 13, 13, 0.96);
   .dot {
-    width: 5px;
-    height: 5px;
+    width: 20px;
+    height: 20px;
     border-radius: 50%;
     background-color: rgb(230, 230, 230);
     cursor: pointer;
