@@ -1,18 +1,20 @@
-<div id="main-container" class="main--container"
-     (touchstart)="touchstart($event)"
-     (touchend)="touchend($event)">
-  <div class="main-tabs--container">
-    <router-outlet></router-outlet>
+<div class="main">
+  <div id="main-container"
+       class="main--container">
+    <div class="main-tabs--container">
+      <router-outlet></router-outlet>
+    </div>
   </div>
-</div>
-<div class="bottom-navigation">
-  <h5>{{routeService.actual}}</h5>
-  <div class="center">
-    <div class="dot" *ngFor="let dot of dots"
-         [routerLink]="dot"
-         routerLinkActive="selected"
-         [skipLocationChange]="true"
-         [routerLinkActiveOptions]="{exact: true}"
-         ariaCurrentWhenActive="page"></div>
+  <div class="bottom-navigation">
+    <h5>{{routeService.actual}}</h5>
+    <div class="center">
+      <div class="dot"
+           *ngFor="let dot of dots"
+           [routerLink]="dot"
+           routerLinkActive="selected"
+           [skipLocationChange]="true"
+           [routerLinkActiveOptions]="{exact: true}"
+           ariaCurrentWhenActive="page"></div>
+    </div>
   </div>
 </div>

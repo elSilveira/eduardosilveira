@@ -1,18 +1,30 @@
 .main--container {
   width: 100%;
-  height: 100vh;
   overflow: hidden;
+  height: calc(100vh - 98px);
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
 }
 .main-tabs {
   &--container {
     width: 100%;
-    height: 100vh;
     // overflow: auto;
     scroll-behavior: smooth;
     transition: ease 1ms;
   }
 }
 .bottom-navigation {
+  height: 98px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: rgba(13, 13, 13, 0.96);
   .dot {
     width: 5px;
     height: 5px;
@@ -30,11 +42,9 @@
     justify-content: center;
     text-align: center;
   }
-  position: absolute;
   width: 100%;
   z-index: 9;
   bottom: 0;
-  padding-bottom: 10px;
   text-align: center;
 }
 h5 {
