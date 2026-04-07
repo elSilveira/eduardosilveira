@@ -36,7 +36,7 @@ const EducationSection = () => {
             ].map((edu) => (
               <div
                 key={edu.degree}
-                className="p-5 rounded-xl bg-gradient-card border border-border hover:border-primary/20 transition-all duration-500 shadow-card"
+                className="p-5 rounded-xl bg-gradient-card border border-white/[0.06] hover:border-white/[0.1] transition-all duration-500 shadow-card"
               >
                 <h4 className="font-semibold text-foreground mb-1">{edu.degree}</h4>
                 <p className="text-sm text-muted-foreground">{edu.school}</p>
@@ -58,7 +58,7 @@ const EducationSection = () => {
             ].map((l) => (
               <div
                 key={l.lang}
-                className="p-5 rounded-xl bg-gradient-card border border-border hover:border-primary/20 transition-all duration-500 shadow-card"
+                className="p-5 rounded-xl bg-gradient-card border border-white/[0.06] hover:border-white/[0.1] transition-all duration-500 shadow-card"
               >
                 <div className="flex items-center justify-between mb-3">
                   <h4 className="font-semibold text-foreground">{l.lang}</h4>
@@ -66,7 +66,7 @@ const EducationSection = () => {
                 </div>
                 <div className="h-2 bg-secondary rounded-full overflow-hidden">
                   <div
-                    className="h-full bg-gradient-primary rounded-full transition-all duration-1000"
+                    className="h-full bg-primary rounded-full transition-all duration-1000"
                     style={{ width: `${l.percent}%` }}
                   />
                 </div>

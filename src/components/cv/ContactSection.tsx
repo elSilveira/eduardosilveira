@@ -23,7 +23,7 @@ const ContactSection = () => {
               { icon: Linkedin, label: 'LinkedIn', value: 'linkedin.com/in/elsilveira', href: 'https://www.linkedin.com/in/elsilveira/' },
               { icon: Github, label: 'GitHub', value: 'github.com/elsilveira', href: 'https://github.com/elsilveira/' },
             ].map(({ icon: Icon, label, value, href }) => (
-              <div key={label} className="group p-5 rounded-xl bg-gradient-card border border-border hover:border-primary/20 transition-all duration-500 shadow-card">
+              <div key={label} className="group p-5 rounded-xl bg-gradient-card border border-white/[0.06] hover:border-white/[0.1] transition-all duration-500 shadow-card">
                 <div className="flex items-start gap-4">
                   <div className="p-2.5 rounded-lg bg-primary/10 text-primary shrink-0">
                     <Icon size={20} />
@@ -53,7 +53,7 @@ const ContactSection = () => {
             <a
               href="/CV_Eduardo_Silveira_2026.pdf"
               download
-              className="magnetic-btn inline-flex items-center gap-3 px-8 py-4 bg-gradient-primary text-primary-foreground font-heading font-semibold text-lg rounded-xl glow"
+              className="magnetic-btn inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground font-heading font-semibold text-lg rounded-xl hover:bg-primary/90 transition-colors"
             >
               <Download size={22} />
               Download Full CV (PDF)

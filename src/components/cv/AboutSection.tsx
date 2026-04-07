@@ -40,7 +40,7 @@ const AboutSection = () => {
           {highlights.map(({ icon: Icon, value, label }) => (
             <div
               key={label}
-              className="group relative p-6 rounded-xl bg-gradient-card border border-border hover:border-primary/30 transition-all duration-500 shadow-card"
+              className="group relative p-6 rounded-xl bg-gradient-card border border-white/[0.06] hover:border-white/[0.12] transition-all duration-500 shadow-card"
             >
               <div className="absolute inset-0 rounded-xl bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               <div className="relative">

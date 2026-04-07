@@ -49,9 +49,9 @@ const HeroSection = () => {
     <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-hero">
       <ParticleField />
       
-      {/* Radial glow */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full opacity-20"
-        style={{ background: 'radial-gradient(circle, hsl(160 84% 39% / 0.15) 0%, transparent 70%)' }}
+      {/* Soft radial spotlight — not saturated */}
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] pointer-events-none"
+        style={{ background: 'radial-gradient(ellipse at center, hsl(263 70% 65% / 0.07) 0%, transparent 65%)' }}
       />
 
       <div className={`relative z-10 text-center px-6 max-w-4xl transition-all duration-1000 ${showContent ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}>
@@ -87,7 +87,7 @@ const HeroSection = () => {
           <a
             href="/CV_Eduardo_Silveira_2026.pdf"
             download
-            className="magnetic-btn inline-flex items-center gap-2 px-6 py-3 bg-gradient-primary text-primary-foreground font-semibold rounded-lg glow"
+            className="magnetic-btn inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-colors"
           >
             <Download size={18} />
             Download CV
@@ -95,7 +95,7 @@ const HeroSection = () => {
           <a
             href="#contact"
             onClick={(e) => { e.preventDefault(); document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }); }}
-            className="magnetic-btn inline-flex items-center gap-2 px-6 py-3 border border-border text-foreground font-semibold rounded-lg hover:border-primary/50 transition-colors"
+            className="magnetic-btn inline-flex items-center gap-2 px-6 py-3 border border-white/10 text-foreground font-semibold rounded-lg hover:bg-white/5 hover:border-white/20 transition-all"
           >
             <Mail size={18} />
             Get in Touch
@@ -114,7 +114,7 @@ const HeroSection = () => {
               href={href}
               target={href.startsWith('http') ? '_blank' : undefined}
               rel={href.startsWith('http') ? 'noopener noreferrer' : undefined}
-              className="group relative p-3 rounded-full border border-border hover:border-primary/50 transition-all duration-300 hover:glow"
+              className="group relative p-3 rounded-full border border-white/10 hover:border-primary/40 hover:bg-primary/10 transition-all duration-300"
               aria-label={label}
             >
               <Icon size={20} className="text-muted-foreground group-hover:text-primary transition-colors" />

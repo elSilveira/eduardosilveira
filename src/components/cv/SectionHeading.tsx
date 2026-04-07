@@ -20,7 +20,7 @@ const SectionHeading = ({ label, title, subtitle }: SectionHeadingProps) => {
       {subtitle && (
         <p className="text-muted-foreground text-lg max-w-2xl">{subtitle}</p>
       )}
-      <div className="mt-4 h-1 w-16 bg-gradient-primary rounded-full" />
+      <div className="mt-4 h-px w-16 bg-primary/60 rounded-full" />
     </div>
   );
 };

@@ -118,7 +118,7 @@ const ExperienceCard = ({ exp, index }: { exp: Experience; index: number }) => {
       </div>
 
       <div
-        className="group p-5 md:p-6 rounded-xl bg-gradient-card border border-border hover:border-primary/20 transition-all duration-500 shadow-card cursor-pointer"
+        className="group p-5 md:p-6 rounded-xl bg-gradient-card border border-white/[0.06] hover:border-white/[0.1] transition-all duration-500 shadow-card cursor-pointer"
         onClick={() => setExpanded(!expanded)}
       >
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2 mb-3">

@@ -67,7 +67,7 @@ const SkillBar = ({ name, level }: { name: string; level: number }) => {
       </div>
       <div className="h-2 bg-secondary rounded-full overflow-hidden">
         <div
-          className={`skill-bar-fill h-full bg-gradient-primary rounded-full ${isVisible ? 'visible' : ''}`}
+          className={`skill-bar-fill h-full bg-primary rounded-full ${isVisible ? 'visible' : ''}`}
           style={{ '--fill-width': `${level}%` } as React.CSSProperties}
         />
       </div>
@@ -91,7 +91,7 @@ const SkillsSection = () => {
           {skillCategories.map((category) => (
             <div
               key={category.title}
-              className="p-6 rounded-xl bg-gradient-card border border-border hover:border-primary/20 transition-all duration-500 shadow-card"
+              className="p-6 rounded-xl bg-gradient-card border border-white/[0.06] hover:border-white/[0.12] transition-all duration-500 shadow-card"
             >
               <h3 className="text-lg font-heading font-semibold text-foreground mb-5 flex items-center gap-2">
                 <span className="h-1.5 w-1.5 rounded-full bg-primary" />
