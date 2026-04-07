@@ -1,6 +1,6 @@
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import SectionHeading from './SectionHeading';
-import { Mail, Linkedin, Github, Download, Phone, MapPin } from 'lucide-react';
+import { Mail, Linkedin, Github, Download, MapPin } from 'lucide-react';
 
 const ContactSection = () => {
   const { ref, isVisible } = useScrollAnimation();
