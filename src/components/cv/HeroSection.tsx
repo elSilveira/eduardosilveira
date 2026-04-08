@@ -85,7 +85,7 @@ const HeroSection = () => {
         {/* CTA Buttons */}
         <div className="flex flex-wrap items-center justify-center gap-4 mb-10">
           <a
-            href="./CV_Eduardo_Silveira_2026.pdf"
+            href="/CV_Eduardo_Silveira_2026.pdf"
             download
             className="magnetic-btn inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-colors"
           >

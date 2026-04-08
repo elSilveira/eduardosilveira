@@ -51,7 +51,7 @@ const ContactSection = () => {
           {/* Download CTA */}
           <div className="text-center">
             <a
-              href="./CV_Eduardo_Silveira_2026.pdf"
+              href="/CV_Eduardo_Silveira_2026.pdf"
               download
               className="magnetic-btn inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground font-heading font-semibold text-lg rounded-xl hover:bg-primary/90 transition-colors"
             >
