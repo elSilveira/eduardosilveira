@@ -2,6 +2,8 @@ import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import SectionHeading from './SectionHeading';
 import { Mail, Linkedin, Github, Download, MapPin, Phone, Globe2 } from 'lucide-react';
 
+const cvUrl = 'https://elsilveira.github.io/eduardosilveira/CV_Eduardo_Silveira_2026.pdf';
+
 const ContactSection = () => {
   const { ref, isVisible } = useScrollAnimation();
 
@@ -52,7 +54,7 @@ const ContactSection = () => {
           {/* Download CTA */}
           <div className="text-center">
             <a
-              href="/CV_Eduardo_Silveira_2026.pdf"
+              href={cvUrl}
               download
               className="magnetic-btn inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground font-heading font-semibold text-lg rounded-xl hover:bg-primary/90 transition-colors"
             >
