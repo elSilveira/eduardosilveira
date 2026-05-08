@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react';
 import { Download, Github, Linkedin, Mail, MapPin, ChevronDown } from 'lucide-react';
 import ParticleField from './ParticleField';
 
-const cvUrl = 'https://elsilveira.github.io/eduardosilveira/CV_Eduardo_Silveira_2026.pdf';
+const cvFileName = 'CV_Eduardo_Silveira_2026.pdf';
+const cvUrl = `${import.meta.env.BASE_URL}${cvFileName}`;
 
 const roles = [
   'Senior Full-Stack Software Engineer',
@@ -89,7 +90,7 @@ const HeroSection = () => {
         <div className="flex flex-wrap items-center justify-center gap-4 mb-10">
           <a
             href={cvUrl}
-            download
+            download={cvFileName}
             className="magnetic-btn inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-colors"
           >
             <Download size={18} />
