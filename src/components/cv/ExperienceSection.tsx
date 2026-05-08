@@ -18,47 +18,54 @@ const experiences: Experience[] = [
     role: 'Senior Fullstack Engineer',
     period: 'Jan 2024 – Present',
     highlights: [
-      'Architected and launched a greenfield marketplace platform enabling TV streaming players to monetize advertising inventory, onboarding multiple enterprise streaming partners within the first quarter.',
-      'Defined the end-to-end frontend architecture using Angular, React, Next.js (13/14), and TypeScript, achieving SEO optimization and a sub-2-second First Contentful Paint (FCP).',
-      'Established CI/CD pipelines and robust testing protocols (Jest, Cypress), reducing production regressions and deployment-related bugs by 40%.',
-      'Collaborated with product and backend teams to deliver a scalable AWS-based marketplace, supporting rapid partner onboarding and future revenue growth.',
-      'Provided technical guidance on architecture decisions, code quality standards, and release stability across the engineering team.',
+      'Built and launched a greenfield marketplace platform from scratch, enabling TV streaming companies to monetize advertising inventory and onboard multiple enterprise partners within the first quarter.',
+      'Defined and led frontend architecture with React, Next.js 13/14, Angular, and TypeScript, improving scalability, maintainability, SEO, and performance with sub-2s First Contentful Paint.',
+      'Designed backend services, REST/GraphQL APIs, and data models for advertisers, campaigns, insertion orders, creatives, publishers, partner operations, reporting, and scalable marketplace workflows.',
+      'Created SemanticIR, a semantic context and prompt-compilation layer for codebase-aware LLM workflows, reusable context retrieval, and AI-assisted development productivity.',
+      'Built AI-powered workflows with RAG concepts, LLMs, LangChain, and MCP tools for agent-assisted insertion orders, campaigns, creatives, and marketplace operations.',
+      'Developed a video upload and processing pipeline using S3-compatible storage for scalable media ingestion, optimization, and delivery.',
+      'Established CI/CD pipelines and testing strategy with Jest and Cypress, reducing production regressions and deployment-related issues by 40%.',
     ],
-    tags: ['Angular', 'React', 'Next.js', 'TypeScript', 'AWS', 'CI/CD'],
+    tags: ['React', 'Next.js', 'Angular', 'TypeScript', 'GraphQL', 'RAG', 'MCP', 'AWS S3', 'CI/CD'],
   },
   {
     company: 'Group BMW',
     role: 'Senior Fullstack Engineer',
     period: 'Jun 2023 – Dec 2023',
     highlights: [
-      'Engineered critical financial deal-management modules for BMW markets in the USA, Canada, and Mexico using Angular, .NET, and SQL.',
-      'Refactored a legacy deals flow, resolving long-standing stability issues and reducing deal-processing delays by 80%.',
-      'Developed and deployed a region-specific Anti-Money Laundering (AML) feature for BMW Mexico, ensuring 100% regulatory compliance.',
-      'Automated regression testing suites, cutting manual QA effort by 15–20 hours per sprint and improving release confidence.',
+      'Engineered critical financial deal-management modules for BMW markets in the USA, Canada, and Mexico using Angular, .NET, SQL, and API-driven application architecture.',
+      'Refactored a legacy deal-processing flow, resolving long-standing stability issues and reducing processing time by 80%.',
+      'Designed and delivered compliance-critical features, including a region-specific Anti-Money Laundering solution for BMW Mexico.',
+      'Built secure backend services and APIs supporting financial operations in a high-reliability, data-intensive environment.',
+      'Optimized complex relational data models and SQL queries for performance, correctness, reporting, and data validation workflows.',
+      'Automated regression testing with Jest/Cypress, reducing manual QA effort by 15-20 hours per sprint and increasing release confidence.',
     ],
-    tags: ['Angular', '.NET', 'SQL', 'AML Compliance'],
+    tags: ['Angular', '.NET', 'SQL', 'APIs', 'AML Compliance', 'Jest', 'Cypress'],
   },
   {
     company: 'Vengreso',
     role: 'Senior Fullstack Developer (Contract)',
     period: 'Apr 2023 – Jun 2025',
     highlights: [
-      'Developed a Chrome Extension with advanced DOM manipulation and AI integration, actively used by 10,000+ users to streamline daily workflows.',
-      'Built a centralized analytics and management dashboard for shortcuts, data, and plans, significantly improving user productivity and operational visibility.',
-      'Optimized Git workflows and branching strategies, reducing merge conflicts and ensuring stable, predictable release cycles.',
-      'Contributed to technical planning in a fast-paced startup environment, balancing speed, maintainability, and scalability.',
+      'Developed a Chrome Extension with advanced DOM manipulation, used by 10,000+ users to streamline workflows and improve daily productivity.',
+      'Built AI-powered extension features that extracted context from LinkedIn, Facebook, emails, posts, replies, and comments to generate relevant responses, posts, comments, and email drafts.',
+      'Implemented context-aware LLM workflows that analyzed selected content and generated tailored replies based on tone, intent, and response type.',
+      'Built backend services and APIs powering a centralized analytics and management dashboard for user data, workflows, and subscription plans.',
+      'Designed scalable data processing flows and storage strategies to support feature growth, reporting, insights, and product decision-making.',
+      'Leveraged AI-assisted development tools to accelerate delivery while maintaining code quality and release stability.',
     ],
-    tags: ['Chrome Extension', 'AI Integration', 'Analytics'],
+    tags: ['Chrome Extension', 'LLM Workflows', 'DOM Automation', 'APIs', 'Analytics', 'AI Automation'],
   },
   {
     company: 'Layer',
     role: 'Senior Frontend Software Engineer',
     period: 'Dec 2020 – Aug 2023',
     highlights: [
-      'Collaborated with a distributed global team across 4+ time zones to build a Bank-as-a-Service platform adopted by 10+ international banks.',
+      'Collaborated with a distributed global team across 4+ time zones to build a Bank-as-a-Service platform adopted by international banks.',
       'Developed a proprietary Web SDK and component library using Angular Dart and Flutter, reducing client integration time by 35%.',
-      'Optimized frontend performance and component reusability, enabling reliable scaling during high-volume banking transaction periods.',
-      'Played a key role in building a white-label banking solution used across multiple financial institutions.',
+      'Designed reusable components and frontend architecture patterns to support scalability and consistency across multiple client integrations.',
+      'Optimized frontend performance and component reusability, ensuring reliability and scalability during high-volume banking transactions.',
+      'Contributed to a white-label banking platform used by multiple financial institutions, enabling scalable and customizable deployments.',
     ],
     tags: ['Angular Dart', 'Flutter', 'BaaS', 'SDK'],
   },
@@ -67,20 +74,22 @@ const experiences: Experience[] = [
     role: 'Senior Web Engineer',
     period: 'Sep 2018 – Dec 2020',
     highlights: [
-      'Led frontend development of a social learning platform featuring interactive video players, games, and gamified educational content.',
+      'Led frontend development of a social learning platform featuring interactive video players, gamified experiences, and educational content.',
       'Partnered closely with UX/UI designers to implement a responsive, reusable design system, increasing user engagement by 30%.',
-      'Modernized the stack using Ionic and Angular, enabling efficient deployment of cross-platform web and mobile experiences.',
+      'Defined and evolved frontend architecture and component standards to support scalability and maintainability.',
+      'Modernized the technology stack using Angular, Ionic, and Node.js with Express, enabling efficient cross-platform delivery across web and mobile.',
+      'Improved performance and user experience through component standardization and responsive design best practices.',
     ],
-    tags: ['Ionic', 'Angular', 'Gamification', 'EdTech'],
+    tags: ['Angular', 'Ionic', 'Node.js', 'Express', 'Design System', 'EdTech'],
   },
   {
     company: 'Easycomtec',
     role: 'System Developer',
     period: 'Jun 2018 – Sep 2018',
     highlights: [
-      'Delivered cross-platform mobile applications using Ionic and React Native.',
+      'Delivered cross-platform mobile applications using Ionic, React Native, Node.js, and C# with .NET.',
     ],
-    tags: ['Ionic', 'React Native'],
+    tags: ['Ionic', 'React Native', 'Node.js', 'C#', '.NET'],
   },
   {
     company: 'Datacoper',
@@ -88,9 +97,9 @@ const experiences: Experience[] = [
     period: 'Mar 2016 – Jan 2017',
     location: 'Cascavel, BR',
     highlights: [
-      'Maintained and expanded CRM systems across Android, iOS, and Web platforms.',
+      'Maintained and expanded CRM systems across Android, iOS, and Web platforms using Node.js, C#, .NET, MySQL, PostgreSQL, and SQL Server.',
     ],
-    tags: ['CRM', 'Android', 'iOS'],
+    tags: ['CRM', 'Android', 'iOS', 'Node.js', '.NET', 'SQL'],
   },
   {
     company: 'Inside Sistemas',
@@ -136,7 +145,7 @@ const ExperienceCard = ({ exp, index }: { exp: Experience; index: number }) => {
           </div>
         </div>
 
-        <div className={`overflow-hidden transition-all duration-500 ${expanded ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'}`}>
+        <div className={`overflow-hidden transition-all duration-500 ${expanded ? 'max-h-[900px] opacity-100' : 'max-h-0 opacity-0'}`}>
           <ul className="space-y-2 mb-4">
             {exp.highlights.map((h, i) => (
               <li key={i} className="flex gap-3 text-sm text-muted-foreground leading-relaxed">

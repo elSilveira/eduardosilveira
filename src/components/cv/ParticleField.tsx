@@ -11,7 +11,7 @@ const ParticleField = () => {
     if (!ctx) return;
 
     let animationId: number;
-    let particles: Array<{
+    const particles: Array<{
       x: number; y: number; vx: number; vy: number; size: number; opacity: number;
     }> = [];
 

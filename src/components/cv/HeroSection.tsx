@@ -3,10 +3,11 @@ import { Download, Github, Linkedin, Mail, MapPin, ChevronDown } from 'lucide-re
 import ParticleField from './ParticleField';
 
 const roles = [
-  'Senior Full-Stack Engineer',
-  'Frontend Architect',
-  'React & Angular Expert',
-  'Performance Optimizer',
+  'Senior Full-Stack Software Engineer',
+  'Frontend-Leaning Fullstack Engineer',
+  'AI-Powered Platform Builder',
+  'React, Next.js & Angular Expert',
+  'API-Driven Product Engineer',
 ];
 
 const HeroSection = () => {

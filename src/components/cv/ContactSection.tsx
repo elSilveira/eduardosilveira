@@ -1,6 +1,6 @@
 import { useScrollAnimation } from '@/hooks/useScrollAnimation';
 import SectionHeading from './SectionHeading';
-import { Mail, Linkedin, Github, Download, MapPin } from 'lucide-react';
+import { Mail, Linkedin, Github, Download, MapPin, Phone, Globe2 } from 'lucide-react';
 
 const ContactSection = () => {
   const { ref, isVisible } = useScrollAnimation();
@@ -18,9 +18,10 @@ const ContactSection = () => {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-10">
             {[
               { icon: Mail, label: 'Email', value: 'eduardoluizsilveira@gmail.com', href: 'mailto:eduardoluizsilveira@gmail.com' },
-              { icon: MapPin, label: 'Location', value: 'Toledo, PR — Brazil', href: undefined },
+              { icon: Phone, label: 'Phone', value: '+55 (45) 99146-4369', href: 'tel:+5545991464369' },
               { icon: MapPin, label: 'Location', value: 'Toledo, PR — Brazil', href: undefined },
               { icon: Linkedin, label: 'LinkedIn', value: 'linkedin.com/in/elsilveira', href: 'https://www.linkedin.com/in/elsilveira/' },
+              { icon: Globe2, label: 'Website', value: 'elsilveira.github.io/eduardosilveira', href: 'https://elsilveira.github.io/eduardosilveira/' },
               { icon: Github, label: 'GitHub', value: 'github.com/elsilveira', href: 'https://github.com/elsilveira/' },
             ].map(({ icon: Icon, label, value, href }) => (
               <div key={label} className="group p-5 rounded-xl bg-gradient-card border border-white/[0.06] hover:border-white/[0.1] transition-all duration-500 shadow-card">
