@@ -6,7 +6,7 @@ interface SkillCategory {
   skills: Array<{ name: string; level: number }>;
 }
 
-const skillCategories: SkillCategory[] = [
+export const skillCategories: SkillCategory[] = [
   {
     title: 'Languages',
     skills: [
@@ -42,11 +42,12 @@ const skillCategories: SkillCategory[] = [
   {
     title: 'AI / LLM Engineering',
     skills: [
-      { name: 'RAG / LLM Integrations', level: 82 },
-      { name: 'SemanticIR / Context Retrieval', level: 82 },
-      { name: 'LangChain / AI Agents', level: 76 },
-      { name: 'MCP Tools', level: 78 },
+      { name: 'RAG / Context Retrieval', level: 84 },
+      { name: 'LLM Integrations / OpenAI', level: 84 },
+      { name: 'MCP / Tool Calling', level: 80 },
+      { name: 'LangChain / AI Agents', level: 78 },
       { name: 'Prompt Engineering', level: 84 },
+      { name: 'Machine Learning / Forecasting', level: 72 },
     ],
   },
   {

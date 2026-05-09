@@ -1,15 +1,19 @@
 import { useEffect, useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const navItems = [
   { label: 'About', href: '#about' },
   { label: 'Skills', href: '#skills' },
   { label: 'Experience', href: '#experience' },
+  { label: 'Projects', href: '#projects' },
   { label: 'Education', href: '#education' },
   { label: 'Contact', href: '#contact' },
 ];
 
 const Navbar = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('');
@@ -33,11 +37,29 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (location.pathname === '/' && location.hash) {
+      window.setTimeout(() => {
+        const el = document.getElementById(location.hash.slice(1));
+        el?.scrollIntoView({ behavior: 'smooth' });
+      }, 0);
+    }
+  }, [location.hash, location.pathname]);
+
   const scrollTo = (href: string) => {
     setMobileOpen(false);
+    if (location.pathname !== '/') {
+      navigate({ pathname: '/', hash: href });
+      return;
+    }
+
     const el = document.getElementById(href.slice(1));
     el?.scrollIntoView({ behavior: 'smooth' });
   };
+
+  const isActive = (href: string) =>
+    activeSection === href.slice(1) ||
+    (location.pathname === '/projects' && href === '#projects');
 
   return (
     <nav
@@ -49,7 +71,14 @@ const Navbar = () => {
     >
       <div className="container flex items-center justify-between h-16 md:h-18">
         <button
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          onClick={() => {
+            setMobileOpen(false);
+            if (location.pathname !== '/') {
+              navigate('/');
+              return;
+            }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}
           className="font-heading font-bold text-lg text-foreground hover:text-primary transition-colors"
         >
           E<span className="text-primary">.</span>Silveira
@@ -62,7 +91,7 @@ const Navbar = () => {
               key={item.label}
               onClick={() => scrollTo(item.href)}
               className={`px-4 py-2 text-sm font-medium rounded-lg transition-all duration-300 ${
-                activeSection === item.href.slice(1)
+                isActive(item.href)
                   ? 'text-primary bg-primary/10'
                   : 'text-muted-foreground hover:text-foreground hover:bg-secondary'
               }`}
@@ -94,7 +123,7 @@ const Navbar = () => {
               key={item.label}
               onClick={() => scrollTo(item.href)}
               className={`block w-full text-left px-4 py-3 text-sm font-medium rounded-lg transition-all ${
-                activeSection === item.href.slice(1)
+                isActive(item.href)
                   ? 'text-primary bg-primary/10'
                   : 'text-muted-foreground hover:text-foreground hover:bg-secondary'
               }`}
