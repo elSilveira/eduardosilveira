@@ -13,3 +13,13 @@ Object.defineProperty(window, "matchMedia", {
     dispatchEvent: () => {},
   }),
 });
+
+Object.defineProperty(URL, "createObjectURL", {
+  writable: true,
+  value: () => "blob:test-url",
+});
+
+Object.defineProperty(URL, "revokeObjectURL", {
+  writable: true,
+  value: () => {},
+});
