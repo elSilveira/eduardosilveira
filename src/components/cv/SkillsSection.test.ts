@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { skillCategories } from './SkillsSection';
+import { skillCategories } from '@/data/skills';
 
 describe('skillCategories', () => {
   it('reflects the AI skills used across the portfolio', () => {
